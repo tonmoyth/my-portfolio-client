@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router";
+import {  NavLink, useLocation } from "react-router";
 import ButtonOne from "../Buttons/ButtonOne";
 import { GoDownload } from "react-icons/go";
 import logo from '../../assets/logo.png'
+import { Link } from 'react-scroll';
 
 const NavBer = () => {
   const { pathname } = useLocation();
@@ -25,7 +26,10 @@ const [isScrolled, setIsScrolled] = useState(false);
         <NavLink className={({isActive}) => isActive && 'bg-accent'} to='/'>Home</NavLink>
       </li>
       <li>
-        <NavLink to='/about'>About</NavLink>
+        <Link to='about'  smooth={true} duration={500}>About</Link>
+      </li>
+      <li>
+        <Link to='skills'  smooth={true} duration={500}>Skills</Link>
       </li>
     </>
   );
