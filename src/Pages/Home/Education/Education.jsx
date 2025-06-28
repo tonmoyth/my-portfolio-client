@@ -18,7 +18,7 @@ const Education = () => {
           <p className="text-primary font-medium">
             Model Institute of Science and Technology
           </p>
-          <p className="text-gray-400">Gazipur, Dhaka</p>
+          <p className="text-gray-400">Gazipur, Dhaka, Bangladesh</p>
           
         </div>
 

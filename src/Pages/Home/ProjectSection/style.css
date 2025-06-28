@@ -1,0 +1,5 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ff014f; /* Tailwind's primary blue */
+  font-weight: bold;
+}
