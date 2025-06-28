@@ -31,6 +31,9 @@ const [isScrolled, setIsScrolled] = useState(false);
       <li>
         <Link to='skills'  smooth={true} duration={500}>Skills</Link>
       </li>
+      <li>
+        <Link to='education'  smooth={true} duration={500}>Education</Link>
+      </li>
     </>
   );
   return (
