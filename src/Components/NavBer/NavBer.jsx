@@ -22,7 +22,7 @@ const [isScrolled, setIsScrolled] = useState(false);
   const links = (
     <>
       <li>
-        <NavLink to='/'>Home</NavLink>
+        <NavLink className={({isActive}) => isActive && 'bg-accent'} to='/'>Home</NavLink>
       </li>
       <li>
         <NavLink to='/about'>About</NavLink>

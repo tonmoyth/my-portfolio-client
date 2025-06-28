@@ -1,46 +1,103 @@
-import React from 'react';
+import React from "react";
+import { MdDeveloperMode } from "react-icons/md";
+import { TbMoodCrazyHappyFilled } from "react-icons/tb";
 
 const About = () => {
-    return (
-       <section className="dark:bg-gray-100 dark:text-gray-800">
-	<div className="container flex flex-col-reverse mx-auto lg:flex-row">
-		<div className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-violet-600 dark:text-gray-50">
-			<div className="flex space-x-2 sm:space-x-4">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
-					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-				</svg>
-				<div className="space-y-2">
-					<p className="text-lg font-medium leading-snug">Lorem ipsum dolor sit amet</p>
-					<p className="leading-snug">Praesentium ea et neque distinctio quas eius repudiandae quaerat obcaecati voluptatem similique!</p>
-				</div>
-			</div>
-			<div className="flex space-x-2 sm:space-x-4">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
-					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-				</svg>
-				<div className="space-y-2">
-					<p className="text-lg font-medium leading-snug">Lorem ipsum dolor sit amet</p>
-					<p className="leading-snug">Praesentium ea et neque distinctio quas eius repudiandae quaerat obcaecati voluptatem similique!</p>
-				</div>
-			</div>
-			<div className="flex space-x-2 sm:space-x-4">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="flex-shrink-0 w-6 h-6">
-					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-				</svg>
-				<div className="space-y-2">
-					<p className="text-lg font-medium leading-snug">Lorem ipsum dolor sit amet</p>
-					<p className="leading-snug">Praesentium ea et neque distinctio quas eius repudiandae quaerat obcaecati voluptatem similique!</p>
-				</div>
-			</div>
-		</div>
-		<div className="lg:w-1/2 xl:w-3/5 dark:bg-gray-100">
-			<div className="flex items-center justify-center p-4 md:p-8 lg:p-12">
-				<img src="https://source.unsplash.com/640x480/" alt="" className="rounded-lg shadow-lg dark:bg-gray-500 aspect-video sm:min-h-96" />
-			</div>
-		</div>
-	</div>
-</section>
-    );
+  return (
+    <section className="w-11/12 mx-auto  space-y-6 py-10 lg:py-16" id="about">
+      <div className="text-center">
+        <span className="font-semibold text-accent">Know Me More</span>
+        <h2 className="text-4xl font-bold text-center uppercase text-primary">
+          About Me
+        </h2>
+      </div>
+
+      <section className="py-6 bg-secondary-content rounded-lg">
+        <div className="grid grid-cols-1 px-4 mx-auto md:grid-cols-2 ">
+          <div className="py-6 md:py-0 md:px-6">
+            <h1 className="">
+              <span className="text-4xl font-bold">
+                I'm <span className="text-accent">Nurislam Hasan Tonmoy</span> —
+                A web developer{" "}
+                <span className="text-3xl font-bold text-gray-400">
+                  with a strong focus on building clean, modern, and responsive
+                  web applications.
+                </span>
+              </span>{" "}
+            </h1>
+          </div>
+
+          <div className="space-y-3">
+            {/* My programming journey*/}
+            <div >
+              <div className="flex gap-3 mb-1">
+                {/* <MdDeveloperMode size={25} /> */}
+                <p className="text-lg font-medium leading-snug">
+                  My programming journey :
+                </p>
+              </div>
+              <div className="space-y-2">
+                <p className="leading-snug">
+                  My programming journey started at 01 - January - 2025. It
+                  wasn't easy — I had to invest a lot of time and effort, face
+                  challenges, and continuously push myself. But through patience
+                  and persistence, I developed a deep love for web development
+                  and never stopped learning.
+                </p>
+              </div>
+            </div>
+
+            {/* enjoy */}
+            <div >
+              <div className="flex gap-3 mb-1">
+                {/* <TbMoodCrazyHappyFilled size={25} /> */}
+                <p className="text-lg font-medium leading-snug">Enjoy Work :</p>
+              </div>
+              <div className="space-y-2">
+                <p className="leading-snug">
+                  I truly enjoy crafting user interfaces, implementing exciting
+                  features, and exploring new technologies that make the web
+                  better. Solving real problems with code and building useful,
+                  interactive experiences is what drives me.
+                </p>
+              </div>
+            </div>
+            {/* hobbies */}
+            <div >
+              <div className="flex gap-3 mb-2">
+                {/* <TbMoodCrazyHappyFilled size={25} /> */}
+                <p className="text-lg font-medium leading-snug">Hobbies :</p>
+              </div>
+              <div className="space-y-1">
+                <p className="leading-snug">
+                  Outside of coding, I love traveling and playing sports.
+                  Exploring new places and staying active helps me stay
+                  creative, focused, and balanced.
+                </p>
+              </div>
+            </div>
+            {/* hobbies */}
+            <div >
+              <div className="flex gap-3 mb-2">
+                {/* <TbMoodCrazyHappyFilled size={25} /> */}
+                <p className="text-lg font-medium leading-snug">
+                  Personality :
+                </p>
+              </div>
+              <div className="space-y-1">
+                <p className="leading-snug">
+                  I’m a curious learner, a problem solver, and a person who
+                  believes in growth through hard work and consistency. Whether
+                  it’s a challenging bug or a new concept, I face it with a
+                  mindset to learn and improve every day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  );
 };
 
 export default About;
