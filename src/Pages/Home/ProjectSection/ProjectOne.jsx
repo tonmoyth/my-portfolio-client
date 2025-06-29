@@ -24,14 +24,14 @@ const ProjectOne = ({ open }) => {
 
   return (
     <section id="project">
-      <div className="text-center">
-        <h2 className="text-4xl font-bold uppercase text-primary">
+      <div data-aos="fade-up" className="text-center">
+        <h2 className="text-2xl lg:text-4xl font-bold uppercase text-primary">
           My Projects
         </h2>
       </div>
 
-      <div className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
-        <div className="block max-w-sm gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
+      <div data-aos="fade-up" className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
+        <div className="block  gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
           <div className="w-full h-64 sm:h-96 lg:col-span-7 overflow-hidden rounded">
             <Swiper
               autoplay={{

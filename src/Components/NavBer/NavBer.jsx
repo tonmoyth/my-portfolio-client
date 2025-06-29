@@ -4,7 +4,18 @@ import ButtonOne from "../Buttons/ButtonOne";
 import { GoDownload } from "react-icons/go";
 import logo from "../../assets/logo.png";
 import { Link } from "react-scroll";
-
+import { IoClose, IoReorderThreeOutline } from "react-icons/io5";
+import { motion } from "motion/react";
+import {
+  FaHome,
+  FaUserAlt,
+  FaLaptopCode,
+  FaGraduationCap,
+  FaProjectDiagram,
+  FaEnvelope,
+  FaArrowDown,
+} from "react-icons/fa";
+const activeStyle = "bg-accent text-white";
 const NavBer = () => {
   const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,35 +29,102 @@ const NavBer = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     setHomeStyle(window.scrollY > 580);
+  //   };
+
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
+
+  // const toggleSidebar = () => {
+  //   setIsOpen(!isOpen);
+  // };
+
   const links = (
     <>
       <li>
-        <NavLink className={({ isActive }) => isActive && "bg-accent"} to="/">
+        <Link
+          activeClass={activeStyle}
+          to="hero"
+          offset={-50}
+          spy={true}
+          smooth={true}
+          duration={500}
+          className="hover:text-accent"
+        >
+          <FaUserAlt className="inline-block mr-1" />
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <Link to="about" smooth={true} duration={500}>
+        <Link
+          activeClass={activeStyle}
+          to="about"
+          offset={-50}
+          spy={true}
+          smooth={true}
+          duration={500}
+          className="hover:text-accent"
+        >
+          <FaUserAlt className="inline-block mr-1" />
           About
         </Link>
       </li>
       <li>
-        <Link to="skills" smooth={true} duration={500}>
+        <Link
+          to="skills"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-50}
+          activeClass={activeStyle}
+          className="hover:text-accent"
+        >
+          <FaLaptopCode className="inline-block mr-1" />
           Skills
         </Link>
       </li>
       <li>
-        <Link to="education" smooth={true} duration={500}>
+        <Link
+          activeClass={activeStyle}
+          offset={-50}
+          spy={true}
+          to="education"
+          smooth={true}
+          className="hover:text-accent"
+          duration={500}
+        >
+          <FaGraduationCap className="inline-block mr-1" />
           Education
         </Link>
       </li>
       <li>
-        <Link to="project" smooth={true} duration={500}>
+        <Link
+          activeClass={activeStyle}
+          offset={-50}
+          spy={true}
+          to="project"
+          smooth={true}
+          duration={500}
+          className="hover:text-accent"
+        >
+          <FaProjectDiagram className="inline-block mr-1" />
           Project
         </Link>
       </li>
       <li>
-        <Link to="contact" smooth={true} duration={500}>
+        <Link
+          activeClass={activeStyle}
+          spy={true}
+          offset={-50}
+          to="contact"
+          smooth={true}
+          duration={500}
+          className="hover:text-accent"
+        >
+          <FaEnvelope className="inline-block mr-1" />
           Contact
         </Link>
       </li>
@@ -54,7 +132,7 @@ const NavBer = () => {
   );
   return (
     <div
-      className={`navbar w-11/12 transition-colors duration-500 mx-auto fixed top-0 flex ${
+      className={`navbar w-11/12 transition-colors duration-500 mx-auto z-[1000] fixed top-0 flex ${
         pathname === "/" ? "absolute top-0 w-full" : ""
       }  ${isScrolled ? " text-primary shadow-md backdrop-blur z-10" : ""}`}
     >
@@ -67,23 +145,6 @@ const NavBer = () => {
       >
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
-            </div>
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
@@ -102,10 +163,51 @@ const NavBer = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a href="/Untitled document (1).pdf" download>
+          {/* <button className="lg:hidden" onClick={toggleSidebar}>
+            {isOpen ? <IoClose size={30}/> : <IoReorderThreeOutline size={30}/>}
+          </button>
+          {isOpen && <Manu></Manu>} */}
+
+          <div className="drawer drawer-end">
+            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+              {/* Page content here */}
+              <label
+                htmlFor="my-drawer-4"
+                className="drawer-button flex justify-end lg:hidden"
+              >
+                <IoReorderThreeOutline size={30} />
+              </label>
+            </div>
+            <div className="drawer-side">
+              <label
+                htmlFor="my-drawer-4"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
+              <ul className="menu bg-secondary-content text-base-content min-h-40 w-50 p-4">
+                {/* Sidebar content here */}
+                {links}
+              </ul>
+            </div>
+          </div>
+
+          <a
+            className="hidden lg:flex"
+            href="/Untitled document (1).pdf"
+            download
+          >
             <ButtonOne
               level="Resume"
-              icon={<GoDownload size={20} />}
+              icon={
+                <motion.div
+                  initial={{ y: 0 }}
+                  animate={{ y: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                >
+                  <FaArrowDown size={17} />
+                </motion.div>
+              }
             ></ButtonOne>
           </a>
         </div>

@@ -24,9 +24,9 @@ const ProjectThree = ({ open }) => {
     "https://i.ibb.co/yBnZzBGW/Screenshot-58.png",
   ];
   return (
-    <section id="project" className="pb-10 lg:pb-12">
+    <section data-aos="fade-up" id="project" className="pb-10 lg:pb-12">
       <div className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
-        <div className="block max-w-sm gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
+        <div className="block gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
           <div className="w-full h-64 sm:h-full lg:col-span-7 overflow-hidden rounded">
             <Swiper
               autoplay={{

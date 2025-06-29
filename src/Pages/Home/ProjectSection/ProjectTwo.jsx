@@ -23,9 +23,9 @@ const ProjectTwo = ({ open }) => {
     "https://i.ibb.co/SXrDYzf2/Screenshot-55.png",
   ];
   return (
-    <section id="project">
+    <section data-aos="fade-up" id="project">
       <div className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
-        <div className="block max-w-sm gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
+        <div className="block gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
           <div className="w-full h-64 sm:h-full lg:col-span-7 overflow-hidden rounded">
             <Swiper
               autoplay={{

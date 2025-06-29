@@ -5,14 +5,14 @@ import { TbMoodCrazyHappyFilled } from "react-icons/tb";
 const About = () => {
   return (
     <section className="w-11/12 mx-auto  space-y-6 py-10 lg:py-16" id="about">
-      <div className="text-center">
+      <div data-aos="fade-up" className="text-center">
         <span className="font-semibold text-accent">Know Me More</span>
-        <h2 className="text-4xl font-bold text-center uppercase text-primary">
+        <h2 className="text-2xl lg:text-4xl font-bold text-center uppercase text-primary">
           About Me
         </h2>
       </div>
 
-      <section className="py-6 bg-secondary-content rounded-lg">
+      <section data-aos="fade-up" className="py-6 bg-secondary-content rounded-lg">
         <div className="grid grid-cols-1 px-4 mx-auto md:grid-cols-2 ">
           <div className="py-6 md:py-0 md:px-6">
             <h1 className="">
@@ -32,7 +32,7 @@ const About = () => {
             <div >
               <div className="flex gap-3 mb-1">
                 {/* <MdDeveloperMode size={25} /> */}
-                <p className="text-lg font-medium leading-snug">
+                <p className="text-lg text-accent font-medium leading-snug">
                   My programming journey :
                 </p>
               </div>
@@ -51,7 +51,7 @@ const About = () => {
             <div >
               <div className="flex gap-3 mb-1">
                 {/* <TbMoodCrazyHappyFilled size={25} /> */}
-                <p className="text-lg font-medium leading-snug">Enjoy Work :</p>
+                <p className="text-lg font-medium text-accent leading-snug">What I Love Doing :</p>
               </div>
               <div className="space-y-2">
                 <p className="leading-snug">
@@ -66,7 +66,7 @@ const About = () => {
             <div >
               <div className="flex gap-3 mb-2">
                 {/* <TbMoodCrazyHappyFilled size={25} /> */}
-                <p className="text-lg font-medium leading-snug">Hobbies :</p>
+                <p className="text-lg font-medium text-accent leading-snug">Hobbies :</p>
               </div>
               <div className="space-y-1">
                 <p className="leading-snug">
@@ -76,11 +76,11 @@ const About = () => {
                 </p>
               </div>
             </div>
-            {/* hobbies */}
+            {/* Personality */}
             <div >
               <div className="flex gap-3 mb-2">
                 {/* <TbMoodCrazyHappyFilled size={25} /> */}
-                <p className="text-lg font-medium leading-snug">
+                <p className="text-lg text-accent font-medium leading-snug">
                   Personality :
                 </p>
               </div>

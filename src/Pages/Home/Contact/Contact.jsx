@@ -40,16 +40,16 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="pb-10 lg:pb-12 space-y-6">
-      <div className="text-center">
+      <div data-aos="fade-up" className="text-center">
         <span className="font-semibold text-accent">Contact</span>
-        <h2 className="text-4xl font-bold  uppercase text-primary">
+        <h2 className="text-2xl lg:text-4xl font-bold  uppercase text-primary">
           Contact with me
         </h2>
       </div>
-      <div className="grid w-11/12 grid-cols-1 mx-auto md:grid-cols-2 ">
-        <section className=" text-primary p-8 rounded-xl ">
-          <div className="max-w-xl mx-auto ">
-            <h2 className="text-4xl font-bold mb-2">
+      <div className="grid overflow-hidden w-11/12 grid-cols-1 gap-4 mx-auto md:grid-cols-2 ">
+        <section data-aos="fade-right" className=" text-primary  rounded-xl ">
+          <div className="w-11/12 mx-auto ">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-2">
               Let’s talk about your project
             </h2>
             <p className="mb-6">
@@ -100,10 +100,10 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        <form
+        <form data-aos="fade-left"
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col p-6 bg-secondary-content space-y-6 rounded-lg"
+          className="flex w-11/12 mx-auto flex-col p-6 bg-secondary-content space-y-6 rounded-lg"
         >
           <label className="block">
             <span className="mb-1">Full name</span>

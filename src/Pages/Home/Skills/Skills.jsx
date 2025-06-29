@@ -16,16 +16,16 @@ const Skills = () => {
       id="skills"
       className="pb-10 lg:pb-12 space-y-6 px-4 w-11/12 mx-auto"
     >
-      <div className="text-center">
+      <div data-aos="fade-up" className="text-center">
         <span className="font-semibold text-accent">Expert</span>
-        <h2 className="text-4xl font-bold text-center uppercase text-primary">
+        <h2 className="text-2xl lg:text-4xl font-bold text-center uppercase text-primary">
           Skills
         </h2>
       </div>
 
       <div>
-        {/* Frontend */}
-        <motion.div className="bg-secondary-content p-6 rounded-xl shadow-md border-l-4 border-accent">
+        
+        <motion.div data-aos="fade-up" className="bg-secondary-content p-6 rounded-xl shadow-md border-l-4 border-accent">
           {/* <h3 className="text-2xl font-semibold mb-4 text-primary">Frontend</h3> */}
           <div className="space-y-4">
              <SkillItem icon={<SiJavascript />} name="JavaScript" level="90%" />
