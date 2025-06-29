@@ -39,7 +39,7 @@ const Contact = () => {
       );
   };
   return (
-    <section className="pb-10 lg:pb-12 space-y-6">
+    <section id="contact" className="pb-10 lg:pb-12 space-y-6">
       <div className="text-center">
         <span className="font-semibold text-accent">Contact</span>
         <h2 className="text-4xl font-bold  uppercase text-primary">

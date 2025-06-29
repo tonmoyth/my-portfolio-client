@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import {  NavLink, useLocation } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import ButtonOne from "../Buttons/ButtonOne";
 import { GoDownload } from "react-icons/go";
-import logo from '../../assets/logo.png'
-import { Link } from 'react-scroll';
+import logo from "../../assets/logo.png";
+import { Link } from "react-scroll";
 
 const NavBer = () => {
   const { pathname } = useLocation();
-const [isScrolled, setIsScrolled] = useState(false);
-
-  
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,19 +21,34 @@ const [isScrolled, setIsScrolled] = useState(false);
   const links = (
     <>
       <li>
-        <NavLink className={({isActive}) => isActive && 'bg-accent'} to='/'>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive && "bg-accent"} to="/">
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to='about'  smooth={true} duration={500}>About</Link>
+        <Link to="about" smooth={true} duration={500}>
+          About
+        </Link>
       </li>
       <li>
-        <Link to='skills'  smooth={true} duration={500}>Skills</Link>
+        <Link to="skills" smooth={true} duration={500}>
+          Skills
+        </Link>
       </li>
       <li>
-        <Link to='education'  smooth={true} duration={500}>Education</Link>
+        <Link to="education" smooth={true} duration={500}>
+          Education
+        </Link>
       </li>
       <li>
-        <Link to='project'  smooth={true} duration={500}>Project</Link>
+        <Link to="project" smooth={true} duration={500}>
+          Project
+        </Link>
+      </li>
+      <li>
+        <Link to="contact" smooth={true} duration={500}>
+          Contact
+        </Link>
       </li>
     </>
   );
@@ -43,7 +56,7 @@ const [isScrolled, setIsScrolled] = useState(false);
     <div
       className={`navbar w-11/12 transition-colors duration-500 mx-auto fixed top-0 flex ${
         pathname === "/" ? "absolute top-0 w-full" : ""
-      }  ${isScrolled ? " text-primary shadow-md backdrop-blur z-10" : ''}`}
+      }  ${isScrolled ? " text-primary shadow-md backdrop-blur z-10" : ""}`}
     >
       <div
         className={`${
@@ -75,22 +88,25 @@ const [isScrolled, setIsScrolled] = useState(false);
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-                {links}
+              {links}
             </ul>
           </div>
-         <div className="flex gap-2 items-center font-bold">
-           <img src={logo} alt="logo" />
-           <h1 className="text-2xl">NHT</h1>
-         </div>
+          <Link to="hero" smooth={true} duration={500}>
+            <div className="flex gap-2 cursor-pointer items-center font-bold">
+              <img src={logo} alt="logo" />
+              <h1 className="text-2xl">NHT</h1>
+            </div>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
           <a href="/Untitled document (1).pdf" download>
-            <ButtonOne level="Resume" icon={<GoDownload size={20}/>}></ButtonOne>
+            <ButtonOne
+              level="Resume"
+              icon={<GoDownload size={20} />}
+            ></ButtonOne>
           </a>
         </div>
       </div>

@@ -9,6 +9,7 @@ import { motion } from "motion/react"
 const Hero = () => {
   return (
     <div
+    id="hero"
     className={`hero min-h-screen bg-cover bg-center bg-ur`}
     // style={{ background: `url('${backgroundImageUrl}')`}}
      style={{
