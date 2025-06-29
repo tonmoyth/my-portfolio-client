@@ -30,7 +30,7 @@ const ProjectOne = ({ open }) => {
         </h2>
       </div>
 
-      <div data-aos="fade-up" className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
+      <div data-aos="fade-up" className="container md:w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
         <div className="block  gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
           <div className="w-full h-64 sm:h-96 lg:col-span-7 overflow-hidden rounded">
             <Swiper
@@ -91,7 +91,7 @@ const ProjectOne = ({ open }) => {
             </div>
             {/* button */}
             <div>
-              <div className="flex flex-wrap gap-6 mt-4 text-2xl text-primary">
+              <div className="flex flex-wrap gap-2 md:gap-6 mt-4 text-2xl text-primary">
                 <Link to="https://hotel-booking-3a439.web.app/" target="_blank">
                   <ButtonOne level="Live"></ButtonOne>
                 </Link>

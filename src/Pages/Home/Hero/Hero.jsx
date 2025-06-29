@@ -17,7 +17,7 @@ const Hero = () => {
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      <div className="hero-content overflow-hidden flex-col w-11/12 mx-auto justify-between lg:flex-row-reverse">
+      <div className="hero-content overflow-hidden flex-col md:w-11/12 mx-auto justify-between lg:flex-row-reverse">
         <div data-aos="fade-left" className="flex-1  flex justify-center items-center relative">
           <motion.h1
             animate={{

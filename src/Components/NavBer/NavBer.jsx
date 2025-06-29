@@ -154,7 +154,7 @@ const NavBer = () => {
           </div>
           <Link to="hero" smooth={true} duration={500}>
             <div className="flex gap-2 cursor-pointer items-center font-bold">
-              <img src={logo} alt="logo" />
+              <img className="w-[40px] md:w-full" src={logo} alt="logo" />
               <h1 className="text-2xl">NHT</h1>
             </div>
           </Link>

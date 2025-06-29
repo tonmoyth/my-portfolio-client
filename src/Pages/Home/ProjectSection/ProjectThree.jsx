@@ -25,7 +25,7 @@ const ProjectThree = ({ open }) => {
   ];
   return (
     <section data-aos="fade-up" id="project" className="pb-10 lg:pb-12">
-      <div className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
+      <div className="container md:w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
         <div className="block gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
           <div className="w-full h-64 sm:h-full lg:col-span-7 overflow-hidden rounded">
             <Swiper
@@ -92,7 +92,7 @@ const ProjectThree = ({ open }) => {
             </div>
             {/* button */}
             <div>
-              <div className="flex flex-wrap gap-6 mt-4 text-2xl text-primary">
+              <div className="flex flex-wrap gap-2 md:gap-6 mt-4 text-2xl text-primary">
                 <Link
                   to="https://event-nest-e98b6.web.app/"
                   target="_blank"

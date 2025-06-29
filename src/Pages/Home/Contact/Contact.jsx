@@ -46,7 +46,7 @@ const Contact = () => {
           Contact with me
         </h2>
       </div>
-      <div className="grid overflow-hidden w-11/12 grid-cols-1 gap-4 mx-auto md:grid-cols-2 ">
+      <div className="grid overflow-hidden md:w-11/12 grid-cols-1 gap-4 mx-auto md:grid-cols-2 ">
         <section data-aos="fade-right" className=" text-primary  rounded-xl ">
           <div className="w-11/12 mx-auto ">
             <h2 className="text-2xl lg:text-4xl font-bold mb-2">

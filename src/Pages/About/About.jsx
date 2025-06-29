@@ -16,10 +16,10 @@ const About = () => {
         <div className="grid grid-cols-1 px-4 mx-auto md:grid-cols-2 ">
           <div className="py-6 md:py-0 md:px-6">
             <h1 className="">
-              <span className="text-4xl font-bold">
+              <span className="text-2xl lg:text-4xl font-bold">
                 I'm <span className="text-accent">Nurislam Hasan Tonmoy</span> —
                 A web developer{" "}
-                <span className="text-3xl font-bold text-gray-400">
+                <span className="text-2xl font-bold text-gray-400">
                   with a strong focus on building clean, modern, and responsive
                   web applications.
                 </span>

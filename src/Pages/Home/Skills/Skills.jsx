@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="pb-10 lg:pb-12 space-y-6 px-4 w-11/12 mx-auto"
+      className="pb-10 lg:pb-12 space-y-6 px-4 lg:w-11/12 mx-auto"
     >
       <div data-aos="fade-up" className="text-center">
         <span className="font-semibold text-accent">Expert</span>
