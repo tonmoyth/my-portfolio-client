@@ -1,3 +1,4 @@
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -10,29 +11,23 @@ import {
   SiMongodb,
   SiFirebase,
   SiNodedotjs,
+  SiHtml5,
+  SiTailwindcss,
 } from "react-icons/si";
 import ButtonOne from "../../../Components/Buttons/ButtonOne";
 import { Link } from "react-router";
 
-const ProjectOne = ({ open }) => {
+const ProjectThree = ({ open }) => {
   const projectImages = [
-    "https://i.ibb.co/zWy7PH2Y/Screenshot-47.png",
-    "https://i.ibb.co/CLGn7y9/Screenshot-48.png",
-    "https://i.ibb.co/fVVRnsxp/Screenshot-49.png",
-    "https://i.ibb.co/PvRjqFQw/Screenshot-50.png",
+    "https://i.ibb.co/ywtXJcd/Screenshot-56.png",
+    "https://i.ibb.co/mVbzzF6q/Screenshot-57.png",
+    "https://i.ibb.co/yBnZzBGW/Screenshot-58.png",
   ];
-
   return (
-    <section id="project">
-      <div className="text-center">
-        <h2 className="text-4xl font-bold uppercase text-primary">
-          My Projects
-        </h2>
-      </div>
-
+    <section id="project" className="pb-10 lg:pb-12">
       <div className="container w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
         <div className="block max-w-sm gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
-          <div className="w-full h-64 sm:h-96 lg:col-span-7 overflow-hidden rounded">
+          <div className="w-full h-64 sm:h-full lg:col-span-7 overflow-hidden rounded">
             <Swiper
               autoplay={{
                 delay: 3000,
@@ -60,43 +55,52 @@ const ProjectOne = ({ open }) => {
           {/* Project Info */}
           <div className="p-6 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold text-accent sm:text-4xl">
-              BookNest
+              EventNext
             </h3>
             <p>
-              A seamless hotel booking app with real-time availability, ratings
-              & secure auth.
+              Discover and explore local events like workshops, sports, and art
+              shows.
             </p>
             {/* Feature */}
             <div>
               <strong className="text-accent">Feature : </strong>
               <ul className="list-disc pl-4">
-                <li>Room Discovery & Booking</li>
-                <li>Users can filter rooms based on their budget.</li>
                 <li>
-                  Users can read and post reviews after completing a stay.
+                  Users can easily discover upcoming local events categorized by
+                  type — such as conferences, workshops, sports, and art
+                  exhibitions.
+                </li>
+                <li>
+                  Each event has a dedicated page that provides detailed
+                  information including event description, date & time.
+                </li>
+                <li>
+                  Users can register and log in to save their favorite events.
                 </li>
               </ul>
             </div>
             {/* Technology */}
             <div>
               <strong className="text-accent">Technology : </strong>
-              <div className="flex flex-wrap gap-3 mt-4 text-2xl">
-                <SiJavascript title="JavaScript" className="text-yellow-500" />
-                <SiReact title="React.js" className="text-cyan-400" />
-                <SiExpress title="Express.js" className="text-gray-700" />
-                <SiMongodb title="MongoDB" className="text-green-600" />
-                <SiFirebase title="Firebase" className="text-yellow-600" />
-                <SiNodedotjs title="Node.js" className="text-green-700" />
+              <div className="flex flex-wrap gap-3 mt-4 text-2xl text-primary">
+                <SiHtml5 title="HTML5" className="text-orange-600" />
+                <SiTailwindcss title="Tailwind CSS" className="text-cyan-500" />
+                <SiJavascript title="JavaScript" className="text-yellow-400" />
+                <SiReact title="React.js" className="text-blue-500" />
+                <SiFirebase title="Firebase" className="text-yellow-500" />
               </div>
             </div>
             {/* button */}
             <div>
               <div className="flex flex-wrap gap-6 mt-4 text-2xl text-primary">
-                <Link to="https://hotel-booking-3a439.web.app/" target="_blank">
+                <Link
+                  to="https://event-nest-e98b6.web.app/"
+                  target="_blank"
+                >
                   <ButtonOne level="Live"></ButtonOne>
                 </Link>
                 <Link
-                  to="https://github.com/tonmoyth/BookNest-Client"
+                  to="https://github.com/tonmoyth/Event-Nest"
                   target="_blank"
                 >
                   <ButtonOne level="GitHub"></ButtonOne>
@@ -112,4 +116,4 @@ const ProjectOne = ({ open }) => {
   );
 };
 
-export default ProjectOne;
+export default ProjectThree;
