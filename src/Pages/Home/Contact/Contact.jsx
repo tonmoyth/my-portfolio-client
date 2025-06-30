@@ -109,6 +109,7 @@ const Contact = () => {
             <span className="mb-1">Full name</span>
             <input
               type="text"
+              required
               name="from_name"
               placeholder="Name"
               className="block w-full border p-2 rounded-md shadow-sm focus:ring focus:ring-opacity-75 "
@@ -118,6 +119,7 @@ const Contact = () => {
             <span className="mb-1">Email address</span>
             <input
               type="email"
+              required
               name="from_email"
               placeholder="Email"
               className="block w-full p-2 rounded-md border shadow-sm focus:ring focus:ring-opacity-75 "
@@ -127,6 +129,7 @@ const Contact = () => {
             <span className="mb-1">Message</span>
             <textarea
               rows="3"
+              required
               name="message"
               className="block p-2 w-full border rounded-md focus:ring focus:ring-opacity-75 "
             ></textarea>

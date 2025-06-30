@@ -15,7 +15,7 @@ import {
   FaEnvelope,
   FaArrowDown,
 } from "react-icons/fa";
-const activeStyle = "bg-accent text-white";
+const activeStyle = "bg-accent text-primary hover:text-primary";
 const NavBer = () => {
   const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);

@@ -12,7 +12,7 @@ const Education = () => {
 
       <div className="grid grid-cols-1 overflow-hidden lg:grid-cols-2  gap-6">
         {/* ssc */}
-        <div data-aos="fade-right" className="bg-secondary-content transition duration-300 transform   hover:scale-105 group  shadow-md rounded-xl p-6 border-accent">
+        <div data-aos="fade-right" className="bg-secondary-content  rounded-xl p-6 border-accent">
           <p className="mt-2 text-sm font-bold text-accent">2015 - 2020</p>
           <h3 className="text-2xl font-semibold text-primary mb-1">
             Secondary School Certificate (SSC)
@@ -23,7 +23,7 @@ const Education = () => {
           <p className="text-gray-500">Bhabanipur, Gazipur, Dhaka, Bangladesh</p>
         </div>
         {/* Diploma */}
-        <div data-aos="fade-left"  className="bg-secondary-content transition duration-300 transform  shadow-sm hover:scale-105 group rounded-xl p-6 ">
+        <div data-aos="fade-left"  className="bg-secondary-content  rounded-xl p-6 ">
           <p className="mt-2 text-sm font-bold text-accent">2021 - 2025</p>
           <h3 className="text-2xl font-semibold text-primary mb-1">
             Polytechnic in Computer Engineering
