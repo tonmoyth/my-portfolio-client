@@ -63,7 +63,7 @@ const ProjectThree = ({ open }) => {
             </p>
             {/* Feature */}
             <div>
-              <strong className="text-accent">Feature : </strong>
+              <strong className="text-accent">Feature  </strong>
               <ul className="list-disc pl-4">
                 <li>
                   Users can easily discover upcoming local events categorized by
@@ -81,7 +81,7 @@ const ProjectThree = ({ open }) => {
             </div>
             {/* Technology */}
             <div>
-              <strong className="text-accent">Technology : </strong>
+              <strong className="text-accent">Technology  </strong>
               <div className="flex flex-wrap gap-3 mt-4 text-2xl text-primary">
                 <SiHtml5 title="HTML5" className="text-orange-600" />
                 <SiTailwindcss title="Tailwind CSS" className="text-cyan-500" />

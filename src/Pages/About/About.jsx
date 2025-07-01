@@ -33,7 +33,7 @@ const About = () => {
               <div className="flex gap-3 mb-1">
                 {/* <MdDeveloperMode size={25} /> */}
                 <p className="text-lg text-accent font-medium leading-snug">
-                  My programming journey :
+                  My programming journey 
                 </p>
               </div>
               <div className="space-y-2">
@@ -51,7 +51,7 @@ const About = () => {
             <div >
               <div className="flex gap-3 mb-1">
                 {/* <TbMoodCrazyHappyFilled size={25} /> */}
-                <p className="text-lg font-medium text-accent leading-snug">What I Love Doing :</p>
+                <p className="text-lg font-medium text-accent leading-snug">What I Love Doing </p>
               </div>
               <div className="space-y-2">
                 <p className="leading-snug">
@@ -66,7 +66,7 @@ const About = () => {
             <div >
               <div className="flex gap-3 mb-2">
                 {/* <TbMoodCrazyHappyFilled size={25} /> */}
-                <p className="text-lg font-medium text-accent leading-snug">Hobbies :</p>
+                <p className="text-lg font-medium text-accent leading-snug">Hobbies </p>
               </div>
               <div className="space-y-1">
                 <p className="leading-snug">
@@ -81,7 +81,7 @@ const About = () => {
               <div className="flex gap-3 mb-2">
                 {/* <TbMoodCrazyHappyFilled size={25} /> */}
                 <p className="text-lg text-accent font-medium leading-snug">
-                  Personality :
+                  Personality 
                 </p>
               </div>
               <div className="space-y-1">

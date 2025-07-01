@@ -68,7 +68,7 @@ const ProjectOne = ({ open }) => {
             </p>
             {/* Feature */}
             <div>
-              <strong className="text-accent">Feature : </strong>
+              <strong className="text-accent">Feature  </strong>
               <ul className="list-disc pl-4">
                 <li>Room Discovery & Booking</li>
                 <li>Users can filter rooms based on their budget.</li>
@@ -79,7 +79,7 @@ const ProjectOne = ({ open }) => {
             </div>
             {/* Technology */}
             <div>
-              <strong className="text-accent">Technology : </strong>
+              <strong className="text-accent">Technology  </strong>
               <div className="flex flex-wrap gap-3 mt-4 text-2xl">
                 <SiJavascript title="JavaScript" className="text-yellow-500" />
                 <SiReact title="React.js" className="text-cyan-400" />

@@ -39,7 +39,7 @@ const Hero = () => {
             I’m Tonmoy <br /> A{" "}
             <span className="text-accent">
               <TypeAnimation
-                sequence={["Web Developer", 500, "Mern Stack Developer", 500]}
+                sequence={["Web Developer", 500, "MERN Stack Developer", 500,"React Developer", 500]}
                 speed={40}
                 repeat={Infinity}
               />
