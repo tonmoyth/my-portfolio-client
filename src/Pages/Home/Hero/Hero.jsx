@@ -18,7 +18,10 @@ const Hero = () => {
       }}
     >
       <div className="hero-content overflow-hidden flex-col md:w-11/12 mx-auto justify-between lg:flex-row-reverse">
-        <div data-aos="fade-left" className="flex-1  flex justify-center items-center relative">
+        <div
+          data-aos="fade-left"
+          className="flex-1  flex justify-center items-center relative"
+        >
           <motion.h1
             animate={{
               y: [10, 0, 10],
@@ -39,7 +42,14 @@ const Hero = () => {
             I’m Tonmoy <br /> A{" "}
             <span className="text-accent">
               <TypeAnimation
-                sequence={["Web Developer", 500, "MERN Stack Developer", 500,"React Developer", 500]}
+                sequence={[
+                  "Web Developer",
+                  500,
+                  "MERN Stack Developer",
+                  500,
+                  "React Developer",
+                  500,
+                ]}
                 speed={40}
                 repeat={Infinity}
               />
@@ -85,7 +95,7 @@ const Hero = () => {
               />
             </Link>
           </div>
-          <a href="/Untitled document (1).pdf" download>
+          <a href="/tonmoy-resume.pdf" download>
             <ButtonTwo level="Download Resume"></ButtonTwo>
           </a>
         </div>

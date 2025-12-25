@@ -192,11 +192,7 @@ const NavBer = () => {
             </div>
           </div>
 
-          <a
-            className="hidden lg:flex"
-            href="/Untitled document (1).pdf"
-            download
-          >
+          <a className="hidden lg:flex" href="/tonmoy-resume.pdf" download>
             <ButtonOne
               level="Resume"
               icon={

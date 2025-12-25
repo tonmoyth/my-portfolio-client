@@ -7,6 +7,9 @@ import {
   SiExpress,
   SiJavascript,
   SiGooglechrome,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTypescript,
 } from "react-icons/si";
 import { motion, useInView } from "framer-motion";
 
@@ -24,25 +27,26 @@ const Skills = () => {
       </div>
 
       <div>
-        
-        <motion.div data-aos="fade-up" className="bg-secondary-content p-6 rounded-xl shadow-md border-l-4 border-accent">
+        <motion.div
+          data-aos="fade-up"
+          className="bg-secondary-content p-6 rounded-xl shadow-md border-l-4 border-accent"
+        >
           {/* <h3 className="text-2xl font-semibold mb-4 text-primary">Frontend</h3> */}
           <div className="space-y-4">
-             <SkillItem icon={<SiJavascript />} name="JavaScript" level="90%" />
-            <SkillItem
-              icon={<FaReact />}
-              name="React.js"
-              level="90%"
-              className="bg-accent"
-            />
-            
-            <SkillItem icon={<FaNodeJs />} name="Node.js" level="80%" />
-            <SkillItem icon={<SiExpress />} name="Express.js" level="85%" />
-            <SkillItem icon={<SiFirebase />} name="Firebase" level="85%" />
-            <SkillItem icon={<SiMongodb />} name="MongoDB" level="80%" />
-           
+            <SkillItem icon={<SiJavascript />} name="JavaScript" level="90%" />
+            <SkillItem icon={<SiTypescript />} name="TypeScript" level="92%" />
+
+            <SkillItem icon={<FaReact />} name="React.js" level="94%" />
+            <SkillItem icon={<SiNextdotjs />} name="Next.js" level="94%" />
+
+            <SkillItem icon={<FaNodeJs />} name="Node.js" level="90%" />
+            <SkillItem icon={<SiExpress />} name="Express.js" level="95%" />
+
+            <SkillItem icon={<SiPostgresql />} name="PostgreSQL" level="90%" />
+            <SkillItem icon={<SiMongodb />} name="MongoDB" level="92%" />
+
+            <SkillItem icon={<SiFirebase />} name="Firebase" level="93%" />
             <SkillItem icon={<FaGithub />} name="GitHub" level="90%" />
-           
           </div>
         </motion.div>
       </div>
