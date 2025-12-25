@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="pb-10 lg:pb-12 space-y-6 px-4 md:w-11/12 mx-auto"
+      className="pb-10 md:mb-40 lg:pb-12 space-y-6 px-4 md:w-11/12 mx-auto"
     >
       <h2 data-aos="fade-up" className="text-2xl lg:text-4xl font-bold text-center text-primary">
         Education

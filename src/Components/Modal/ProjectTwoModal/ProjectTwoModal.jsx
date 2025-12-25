@@ -24,19 +24,20 @@ const ProjectTwoModal = ({ isOpen, close }) => {
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             transition
-            className="w-full max-w-3xl rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
+            className="w-full max-w-3xl rounded-xl bg-black p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
           >
             <DialogTitle
               as="h3"
               className="font-medium text-2xl lg:text-4xl text-accent"
             >
-              TaskUp
+              StudyNest
             </DialogTitle>
             <p className="mt-2 text-sm/6 text-primary">
-              The purpose of TaskUp is to create a simple and efficient
-              freelance task marketplace where individuals can post small tasks
-              with specific requirements, and freelancers can easily browse and
-              bid on those tasks.
+              StudyNest is an interactive e-learning platform where students can
+              enroll in courses, and teachers can share their knowledge by
+              adding their own classes. It includes role-based dashboards for
+              Admin, Teacher, and Student, and a secure login/registration
+              system.
             </p>
             <br />
             {/* Technology */}
@@ -57,23 +58,19 @@ const ProjectTwoModal = ({ isOpen, close }) => {
             <br />
             <div>
               <strong className="text-accent">Challenges faced : </strong>
-              While building TaskUp, one of the major challenges was designing a
-              smooth and intuitive task posting and bidding system that works in
-              real time. Ensuring proper user authentication, managing user
-              roles (task provider vs freelancer), and maintaining data
-              integrity were also complex parts. Additionally, building a
-              responsive UI and handling form validations across different
-              components required careful planning and debugging.
+              Managing complex role-based access across dashboards and keeping
+              data in sync with real-time updates. Implementing secure payments
+              with reliable enrollment tracking after transactions. Optimizing
+              performance with server-side search, pagination, and scalable
+              state management.
             </div>
             <br />
             <div>
               <strong className="text-accent">Future Plan : </strong>I plan to
-              enhance TaskUp by integrating a secure payment system for safe
-              transactions between users. I also want to add chat functionality,
-              advanced filtering for tasks, a freelancer rating system, and an
-              admin dashboard for better platform management. My goal is to make
-              TaskUp a more powerful, scalable, and trustworthy freelance task
-              marketplace for everyday users.
+              Add live classes with real-time video and chat integration.
+              Implement AI-based course recommendations based on student
+              activity. Introduce certificates and progress-based achievements
+              for completed courses.
             </div>
             <div className="mt-4">
               <Button

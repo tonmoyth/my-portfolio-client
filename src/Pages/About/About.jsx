@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       data-aos="fade-up"
-      className=" mb-8 bg-secondary-content rounded-lg py-8"
+      className=" mb-8 md:mb-40 bg-secondary-content rounded-lg py-8"
     >
       <div data-aos="fade-up" className="text-center py-8 md:mb-0">
         <span className="font-semibold text-accent">Know Me More</span>

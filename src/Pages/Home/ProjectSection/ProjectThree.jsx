@@ -19,9 +19,9 @@ import { Link } from "react-router";
 
 const ProjectThree = ({ open }) => {
   const projectImages = [
-    "https://i.ibb.co/ywtXJcd/Screenshot-56.png",
-    "https://i.ibb.co/mVbzzF6q/Screenshot-57.png",
-    "https://i.ibb.co/yBnZzBGW/Screenshot-58.png",
+    "https://i.ibb.co.com/whXFDz0v/bannar.png",
+    "https://i.ibb.co.com/BVC7KJ06/Screenshot-2025-12-25-224842.png",
+    "https://i.ibb.co.com/jZW8VKt6/Screenshot-2025-12-25-224914.png",
   ];
   return (
     <section data-aos="fade-up" id="project" className="pb-10 lg:pb-12">
@@ -55,33 +55,33 @@ const ProjectThree = ({ open }) => {
           {/* Project Info */}
           <div className="p-6 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold text-accent sm:text-4xl">
-              EventNext
+              Zentrix Technology Limited.
             </h3>
             <p>
-              Discover and explore local events like workshops, sports, and art
-              shows.
+              Modern company website showcasing services and products with
+              interactive engaging design.
             </p>
             {/* Feature */}
             <div>
-              <strong className="text-accent">Feature  </strong>
+              <strong className="text-accent">Feature </strong>
               <ul className="list-disc pl-4">
                 <li>
-                  Users can easily discover upcoming local events categorized by
-                  type — such as conferences, workshops, sports, and art
-                  exhibitions.
+                  Displays all services provided by the company in a clean and
+                  organized layout.
                 </li>
                 <li>
-                  Each event has a dedicated page that provides detailed
-                  information including event description, date & time.
+                  Showcases products with interactive sections and detailed
+                  descriptions for better user understanding.
                 </li>
                 <li>
-                  Users can register and log in to save their favorite events.
+                  Eye catching UI design with smooth animations for engaging and
+                  modern user experience.
                 </li>
               </ul>
             </div>
             {/* Technology */}
             <div>
-              <strong className="text-accent">Technology  </strong>
+              <strong className="text-accent">Technology </strong>
               <div className="flex flex-wrap gap-3 mt-4 text-2xl text-primary">
                 <SiHtml5 title="HTML5" className="text-orange-600" />
                 <SiTailwindcss title="Tailwind CSS" className="text-cyan-500" />
@@ -93,14 +93,11 @@ const ProjectThree = ({ open }) => {
             {/* button */}
             <div>
               <div className="flex flex-wrap gap-2 md:gap-6 mt-4 text-2xl text-primary">
-                <Link
-                  to="https://event-nest-e98b6.web.app/"
-                  target="_blank"
-                >
+                <Link to="https://zentrixltd.com/" target="_blank">
                   <ButtonOne level="Live"></ButtonOne>
                 </Link>
                 <Link
-                  to="https://github.com/tonmoyth/Event-Nest"
+                  to="https://github.com/kazitoha/zentrix_ltd_website"
                   target="_blank"
                 >
                   <ButtonOne level="GitHub"></ButtonOne>

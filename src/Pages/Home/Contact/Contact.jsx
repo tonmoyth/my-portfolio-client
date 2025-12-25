@@ -39,7 +39,7 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="pb-10 lg:pb-12 space-y-6">
+    <section id="contact" className="pb-10 mb-40 lg:pb-12 space-y-6">
       <div data-aos="fade-up" className="text-center">
         <span className="font-semibold text-accent">Contact</span>
         <h2 className="text-2xl lg:text-4xl font-bold  uppercase text-primary">

@@ -24,11 +24,7 @@ const ProjectOne = ({ open }) => {
 
   return (
     <section id="project">
-      <div data-aos="fade-up" className="text-center">
-        <h2 className="text-2xl lg:text-4xl font-bold uppercase text-primary">
-          My Projects
-        </h2>
-      </div>
+      
 
       <div data-aos="fade-up" className="container md:w-11/12 p-6 mx-auto space-y-6 sm:space-y-12">
         <div className="block  gap-3 mx-auto sm:max-w-full bg-secondary-content rounded-lg group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">

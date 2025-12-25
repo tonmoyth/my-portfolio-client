@@ -42,21 +42,29 @@ const ProjectSection = () => {
 
   return (
     <>
-      <ProjectOne open={open}></ProjectOne>
-      <ProjectTwo open={openModalTwo}></ProjectTwo>
-      <ProjectThree open={openModalThree}></ProjectThree>
+      <div className="md:mb-40">
+        <div data-aos="fade-up" className="text-center">
+          <h2 className="text-2xl lg:text-4xl font-bold uppercase text-primary">
+            My Projects
+          </h2>
+        </div>
+        <ProjectTwo open={openModalTwo}></ProjectTwo>
+        <ProjectThree open={openModalThree}></ProjectThree>
+        <ProjectOne open={open}></ProjectOne>
 
-
-
-      {/* project one modal */}
-      <Modal isOpen={isOpen} close={close}></Modal>
-      {/* project two modal */}
-      <ProjectTwoModal
-        isOpen={isOpenModalTwo}
-        close={closeModalTwo}
-      ></ProjectTwoModal>
-      {/* project three modal */}
-      <ProjectThreeModal isOpen={isOpenModalThree} close={closeModalThree}></ProjectThreeModal>
+        {/* project one modal */}
+        <Modal isOpen={isOpen} close={close}></Modal>
+        {/* project two modal */}
+        <ProjectTwoModal
+          isOpen={isOpenModalTwo}
+          close={closeModalTwo}
+        ></ProjectTwoModal>
+        {/* project three modal */}
+        <ProjectThreeModal
+          isOpen={isOpenModalThree}
+          close={closeModalThree}
+        ></ProjectThreeModal>
+      </div>
     </>
   );
 };

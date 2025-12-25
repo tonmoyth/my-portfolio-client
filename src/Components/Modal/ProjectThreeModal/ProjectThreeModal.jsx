@@ -24,19 +24,17 @@ const ProjectThreeModal = ({ isOpen, close }) => {
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             transition
-            className="w-full max-w-3xl rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
+            className="w-full max-w-3xl rounded-xl bg-black p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
           >
             <DialogTitle
               as="h3"
               className="font-medium text-2xl lg:text-4xl text-accent"
             >
-              TaskUp
+              Zentrix Technology Limited.
             </DialogTitle>
             <p className="mt-2 text-sm/6 text-primary">
-              The purpose of TaskUp is to create a simple and efficient
-              freelance task marketplace where individuals can post small tasks
-              with specific requirements, and freelancers can easily browse and
-              bid on those tasks.
+              Modern company website showcasing services and products with
+              interactive engaging design.
             </p>
             <br />
             {/* Technology */}
@@ -53,13 +51,13 @@ const ProjectThreeModal = ({ isOpen, close }) => {
             <br />
             <div>
               <strong className="text-accent">Challenges faced : </strong>
-              The biggest challenge during development was creating a system
-              where users could easily view and filter events. Additionally,
-              implementing the login system and ensuring a fully responsive
-              design came with some technical difficulties.
+              Creating smooth, high-performance animations without affecting
+              page load speed. Maintaining consistent UI/UX across sections
+              while using multiple animation libraries. Structuring scalable
+              components for services and product showcases.
             </div>
             <br />
-            <div>
+            {/* <div>
               <strong className="text-accent">Future Plan : </strong>
               In the future, I plan to enhance this platform by adding features
               such as event booking or registration, user reviews and ratings,
@@ -67,7 +65,7 @@ const ProjectThreeModal = ({ isOpen, close }) => {
               for event organizers. The goal is to build a complete ecosystem
               where users can not only discover but also engage deeply with
               local events.
-            </div>
+            </div> */}
             <div className="mt-4">
               <Button
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:not-data-focus:outline-none hover:text-black transition-all duration-300 data-focus:outline data-focus:outline-white data-hover:bg-primary data-open:bg-primary"
