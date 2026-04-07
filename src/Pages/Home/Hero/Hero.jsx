@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link as ScrollLink } from "react-scroll";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import ButtonTwo from "../../../Components/Buttons/ButtonTwo";
 import backgroundImage from "../../../assets/background.jpg";
@@ -45,9 +45,11 @@ const Hero = () => {
                 sequence={[
                   "Web Developer",
                   500,
-                  "MERN Stack Developer",
+                  "Full Stack Developer",
                   500,
-                  "React Developer",
+                  "Frontend Developer",
+                  500,
+                  "Backend Developer",
                   500,
                 ]}
                 speed={40}
@@ -56,15 +58,15 @@ const Hero = () => {
             </span>
           </h1>
           <p>
-            I’m a results-driven Web Developer specializing in building
-            scalable, responsive web applications that deliver real business
+            I’m a results-driven Full Stack Developer with expertise in building
+            scalable, high-performance web applications that drive real business
             value.
           </p>
 
           {/* social icons */}
           <div className="flex gap-3">
-            <Link
-              to="https://github.com/tonmoyth"
+            <a
+              href="https://github.com/tonmoyth"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -72,9 +74,9 @@ const Hero = () => {
                 className="hover:text-accent transition-all duration-200"
                 size={25}
               />
-            </Link>
-            <Link
-              to="https://www.linkedin.com/in/nurislam-hasan-tonmoy-88b1bb368/"
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nurislam-hasan-tonmoy-88b1bb368/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -82,10 +84,10 @@ const Hero = () => {
                 className="hover:text-accent transition-all duration-200"
                 size={25}
               />
-            </Link>
+            </a>
 
-            <Link
-              to="https://x.com/hasan_tonm58653"
+            <a
+              href="https://x.com/hasan_tonm58653"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -93,11 +95,30 @@ const Hero = () => {
                 className="hover:text-accent transition-all duration-200"
                 size={25}
               />
-            </Link>
+            </a>
           </div>
-          <a href="/tonmoy-resume.pdf" download>
-            <ButtonTwo level="Download Resume"></ButtonTwo>
-          </a>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5 pt-4">
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className="cursor-pointer"
+            >
+              <ButtonTwo level="Hire Me" solid />
+            </ScrollLink>
+            <ScrollLink
+              to="project"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className="cursor-pointer"
+            >
+              <ButtonTwo level="View Project" />
+            </ScrollLink>
+          </div>
         </div>
       </div>
     </div>

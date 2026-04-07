@@ -1,24 +1,62 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import ButtonOne from "../Buttons/ButtonOne";
-import { GoDownload } from "react-icons/go";
 import logo from "../../assets/logo.png";
 import { Link } from "react-scroll";
-import { IoClose, IoReorderThreeOutline } from "react-icons/io5";
+import { IoReorderThreeOutline } from "react-icons/io5";
 import { motion } from "motion/react";
-import {
-  FaHome,
-  FaUserAlt,
-  FaLaptopCode,
-  FaGraduationCap,
-  FaProjectDiagram,
-  FaEnvelope,
-  FaArrowDown,
-} from "react-icons/fa";
-const activeStyle = "bg-accent text-primary hover:text-primary";
+import { FaArrowDown } from "react-icons/fa";
+
+// NavLink Item Component with Framer Motion
+const NavItem = ({ to, label, offset = -50, onClose }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  return (
+    <motion.li
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      className="relative"
+    >
+      <Link
+        to={to}
+        offset={offset}
+        spy={true}
+        smooth={true}
+        duration={500}
+        className="hover:text-accent cursor-pointer px-3 py-2 rounded-lg transition-colors duration-300 block w-full"
+        onClick={handleClick}
+      >
+        <motion.span
+          animate={{ scale: isHovered ? 1.02 : 1 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="inline-block"
+        >
+          {label}
+        </motion.span>
+
+        {/* Underline animation */}
+        <motion.div
+          className="absolute bottom-0 left-0 h-0.5 bg-accent"
+          initial={{ width: 0 }}
+          animate={{ width: isHovered ? "100%" : 0 }}
+          transition={{ duration: 0.3 }}
+          style={{ width: isHovered ? "100%" : 0 }}
+        />
+      </Link>
+    </motion.li>
+  );
+};
+
 const NavBer = () => {
   const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,154 +67,133 @@ const NavBer = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // useEffect(() => {
-  //   const onScroll = () => {
-  //     setHomeStyle(window.scrollY > 580);
-  //   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 || window.innerWidth <= 0) {
+        setIsDrawerOpen(false);
+      }
+    };
 
-  //   window.addEventListener("scroll", onScroll);
-  //   return () => window.removeEventListener("scroll", onScroll);
-  // }, []);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  // const toggleSidebar = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  const handleDrawClick = (event) => {
+    if (!isDrawerOpen) return;
 
-  const links = (
+    const clickedMenu = event.target.closest(".drawer-side .menu");
+    const clickedToggle = event.target.closest(".drawer-button");
+
+    if (!clickedMenu && !clickedToggle) {
+      setIsDrawerOpen(false);
+    }
+  };
+
+  const handleCloseDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
+  const getLinks = (onClose) => (
     <>
-      <li>
-        <Link
-          activeClass={activeStyle}
-          to="hero"
-          offset={-50}
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-accent"
-        >
-          <FaUserAlt className="inline-block mr-1" />
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link
-          activeClass={activeStyle}
-          to="about"
-          offset={-50}
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="hover:text-accent"
-        >
-          <FaUserAlt className="inline-block mr-1" />
-          About
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="skills"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-50}
-          activeClass={activeStyle}
-          className="hover:text-accent"
-        >
-          <FaLaptopCode className="inline-block mr-1" />
-          Skills
-        </Link>
-      </li>
-      <li>
-        <Link
-          activeClass={activeStyle}
-          offset={-50}
-          spy={true}
-          to="education"
-          smooth={true}
-          className="hover:text-accent"
-          duration={500}
-        >
-          <FaGraduationCap className="inline-block mr-1" />
-          Education
-        </Link>
-      </li>
-      <li>
-        <Link
-          activeClass={activeStyle}
-          offset={-50}
-          spy={true}
-          to="project"
-          smooth={true}
-          duration={500}
-          className="hover:text-accent"
-        >
-          <FaProjectDiagram className="inline-block mr-1" />
-          Project
-        </Link>
-      </li>
-      <li>
-        <Link
-          activeClass={activeStyle}
-          spy={true}
-          offset={-50}
-          to="contact"
-          smooth={true}
-          duration={500}
-          className="hover:text-accent"
-        >
-          <FaEnvelope className="inline-block mr-1" />
-          Contact
-        </Link>
-      </li>
+      <NavItem to="hero" label="Home" offset={-50} onClose={onClose} />
+      <NavItem to="about" label="About" offset={-50} onClose={onClose} />
+      {/* <NavItem to="stack" label="My Stack" offset={-50} onClose={onClose} /> */}
+      <NavItem to="skills" label="Skills" offset={-50} onClose={onClose} />
+      {/* <NavItem to="service" label="Service" offset={-50} onClose={onClose} /> */}
+
+      <NavItem
+        to="education"
+        label="Education & Experience"
+        offset={-50}
+        onClose={onClose}
+      />
+      <NavItem to="project" label="Project" offset={-50} onClose={onClose} />
+
+      <NavItem to="contact" label="Contact" offset={-50} onClose={onClose} />
     </>
   );
-  return (
-    <div
-      className={`navbar w-11/12 transition-colors duration-500 mx-auto z-[1000] fixed top-0 flex ${
-        pathname === "/" ? "absolute top-0 w-full" : ""
-      }  ${isScrolled ? " text-primary shadow-md backdrop-blur z-10" : ""}`}
-    >
-      <div
-        className={`${
-          pathname === "/"
-            ? "w-11/12 mx-auto flex"
-            : "flex justify-between w-full"
-        }`}
-      >
-        <div className="navbar-start">
-          <div className="dropdown">
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              {links}
-            </ul>
-          </div>
-          <Link to="hero" smooth={true} duration={500}>
-            <div className="flex gap-2 cursor-pointer items-center font-bold">
-              <img className="w-[40px] md:w-full" src={logo} alt="logo" />
-              <h1 className="text-2xl">NHT</h1>
-            </div>
-          </Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
-        </div>
-        <div className="navbar-end">
-          {/* <button className="lg:hidden" onClick={toggleSidebar}>
-            {isOpen ? <IoClose size={30}/> : <IoReorderThreeOutline size={30}/>}
-          </button>
-          {isOpen && <Manu></Manu>} */}
 
-          <div className="drawer drawer-end">
-            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+  const desktopLinks = getLinks(null);
+  return (
+    <motion.div
+      className={`navbar w-full transition-all duration-500 ${
+        isScrolled
+          ? "fixed top-0 z-50 shadow-lg backdrop-blur-md bg-transparent"
+          : pathname === "/"
+            ? "absolute top-0 w-full"
+            : "fixed top-0 z-50"
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+    >
+      <div className="w-11/12 mx-auto flex justify-between items-center py-3">
+        {/* Logo */}
+        <Link to="hero" smooth={true} duration={500}>
+          <div className="flex gap-2 cursor-pointer items-center font-bold">
+            <img className="w-[40px]" src={logo} alt="logo" />
+            <h1 className="text-2xl hidden md:block text-primary md:text-white">
+              NHT
+            </h1>
+          </div>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <ul className="menu menu-horizontal px-1 hidden lg:flex gap-2">
+          {desktopLinks}
+        </ul>
+
+        {/* Mobile Menu & Resume Button */}
+        <div className="flex items-center gap-4">
+          {/* Desktop Resume Button */}
+          <a
+            className="hidden lg:flex"
+            href="/tonmoy-resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <ButtonOne
+                level="Resume"
+                icon={
+                  <motion.div
+                    initial={{ y: 0 }}
+                    animate={{ y: [0, 5, 0] }}
+                    transition={{ repeat: Infinity, duration: 2 }}
+                  >
+                    <FaArrowDown size={17} />
+                  </motion.div>
+                }
+              />
+            </motion.div>
+          </a>
+
+          {/* Mobile Drawer */}
+          <div
+            className="drawer drawer-end lg:hidden"
+            onClick={handleDrawClick}
+          >
+            <input
+              id="my-drawer-4"
+              type="checkbox"
+              className="drawer-toggle"
+              checked={isDrawerOpen}
+              onChange={(e) => setIsDrawerOpen(e.target.checked)}
+            />
             <div className="drawer-content">
-              {/* Page content here */}
-              <label
-                htmlFor="my-drawer-4"
-                className="drawer-button flex justify-end lg:hidden"
-              >
-                <IoReorderThreeOutline size={30} />
+              <label htmlFor="my-drawer-4" className="drawer-button">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <IoReorderThreeOutline size={30} className="text-primary" />
+                </motion.div>
               </label>
             </div>
             <div className="drawer-side">
@@ -184,31 +201,28 @@ const NavBer = () => {
                 htmlFor="my-drawer-4"
                 aria-label="close sidebar"
                 className="drawer-overlay"
-              ></label>
-              <ul className="menu bg-secondary-content text-base-content min-h-40 w-50 p-4">
-                {/* Sidebar content here */}
-                {links}
+                onClick={() => setIsDrawerOpen(false)}
+              />
+              <ul className="menu bg-base-200 text-base-content min-h-full w-64 p-4 space-y-2">
+                {getLinks(handleCloseDrawer)}
+                <li className="mt-4 pt-4 border-t border-base-300">
+                  <a
+                    href="/tonmoy-resume.pdf"
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-accent text-primary font-bold hover:bg-accent/90"
+                  >
+                    <FaArrowDown size={17} />
+                    Download Resume
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-
-          <a className="hidden lg:flex" href="/tonmoy-resume.pdf" download>
-            <ButtonOne
-              level="Resume"
-              icon={
-                <motion.div
-                  initial={{ y: 0 }}
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                >
-                  <FaArrowDown size={17} />
-                </motion.div>
-              }
-            ></ButtonOne>
-          </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

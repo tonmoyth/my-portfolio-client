@@ -35,16 +35,24 @@ const Contact = () => {
             title: "Oops...",
             text: "Something went wrong. Please try again later or contact me via email.",
           });
-        }
+        },
       );
   };
   return (
     <section id="contact" className="pb-10 mb-40 lg:pb-12 space-y-6">
-      <div data-aos="fade-up" className="text-center">
-        <span className="font-semibold text-accent">Contact</span>
-        <h2 className="text-2xl lg:text-4xl font-bold  uppercase text-primary">
-          Contact with me
+      <div data-aos="fade-up" className="mb-10 max-w-3xl mx-auto text-center">
+        <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-accent/90">
+          GET IN TOUCH
+        </span>
+
+        <h2 className="mt-5 text-5xl md:text-6xl font-black tracking-tight text-white">
+          Contact With Me
         </h2>
+
+        <p className="mt-5 mx-auto max-w-2xl text-xl leading-relaxed text-gray-300">
+          Have a project in mind or want to collaborate? Let’s build something
+          amazing together.
+        </p>
       </div>
       <div className="grid overflow-hidden md:w-11/12 grid-cols-1 gap-4 mx-auto md:grid-cols-2 ">
         <section data-aos="fade-right" className=" text-primary  rounded-xl ">
@@ -100,7 +108,8 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        <form data-aos="fade-left"
+        <form
+          data-aos="fade-left"
           ref={form}
           onSubmit={sendEmail}
           className="flex w-11/12 mx-auto flex-col p-6 bg-secondary-content space-y-6 rounded-lg"
